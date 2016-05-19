@@ -1,0 +1,99 @@
+/* PAGE */
+.right{
+  float:right;
+}
+.left{
+  float: left;
+}
+
+.card-head header{
+  text-transform: uppercase;
+}
+
+.card-head header i.fa{
+  font-size: 20px;
+}
+
+.header-nav-profile .dropdown {
+  padding: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+    .headerbar-right .header-nav-profile {
+        position: absolute;
+        float: left;
+        width: 100%;
+        padding-right: 20px;
+  }
+}
+
+
+/* DATE FLOATING LABEL */
+.none-floating-label .form-control ~ label {
+  top: 0;
+  font-size: 12px;
+}
+
+
+/* TABLE */
+table.dataTable thead .sorting:last-child:before,
+table.dataTable thead .sorting_asc:last-child:before,
+table.dataTable thead .sorting_asc_disabled:last-child:before,
+table.dataTable thead .sorting_desc:last-child:before,
+table.dataTable thead .sorting_desc_disabled:last-child:before {
+  
+  content: "";
+}
+table.dataTable thead .sorting_asc:last-child:before,
+table.dataTable thead .sorting_asc_disabled:last-child:before {
+  content: "";
+}
+table.dataTable thead .sorting_desc:last-child:before,
+table.dataTable thead .sorting_desc_disabled:last-child:before {
+  content: "";
+}
+
+/* DROPDOWN CUSTOMER */
+.search-text{
+  width:100%;
+  background:#ffffff;
+  border-radius:4px;
+  box-shadow:0 0 40px -10px #000;
+  color:#505050;
+  margin-top:24px;
+  max-height:0;
+  display: none;
+  transition:all .5s;
+}
+.search-text-down{
+    padding-left: 0px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: #f2f3f3;
+    z-index: 1000;
+    display:block;
+    float: left;
+    list-style: none;
+    transition:all .5s;
+}
+
+.auto{
+  
+}
+
+.suggest{
+  margin: 5px;
+}
+
+.suggest:hover{
+    background-color: #607d8b;
+    border-color: #607d8b;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.suggest-name{
+  
+}
