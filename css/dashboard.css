@@ -1,4 +1,4 @@
-/* PAGE */
+/* GLOBAL STYLE SHEET */
 .right{
   float:right;
 }
@@ -11,7 +11,7 @@
 }
 
 .card-head header i.fa{
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .header-nav-profile .dropdown {

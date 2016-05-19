@@ -18,11 +18,13 @@
     />
     <link type="text/css" rel="stylesheet" href="./assets/css/theme-default/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="./assets/css/theme-default/materialadmin.css" />
-    <link type="text/css" rel="stylesheet" href="./assets/css/theme-default/font-awesome.min.css" />
+	<script src="https://use.fontawesome.com/92f5b55f55.js"></script>
+
+    <!--<link type="text/css" rel="stylesheet" href="./assets/css/theme-default/font-awesome.min.css" />-->
     <link type="text/css" rel="stylesheet" href="./assets/css/theme-default/material-design-iconic-font.min.css" />
     <!-- END GLOBAL STYLE -->
     
-    <link type="text/css" rel="stylesheet" href="./css/dashboard.css" />
+    <link type="text/css" rel="stylesheet" href="./css/client-dashboard.css" />
     <link type="text/css" rel="stylesheet" href="./assets/css/theme-default/libs/DataTables/jquery.dataTables.css" />
     <!--<link type="text/css" rel="stylesheet" href="./assets/css/theme-default/libs/DataTables/extensions/dataTables.colVis.css"
 	/>-->
@@ -103,10 +105,10 @@
 						<!--end .col -->
 						<div class="card">
 							<div class="card-head style-default-light no-padding">
-								<header>Item List</header>
+								<header>Cargo List</header>
 								<header class="right">
 									<button type="button" class="btn btn-icon-toggle ink-reaction" data-toggle="modal" data-target="#modal-item">
-										<i class="fa fa-plus" data-toggle="tooltip" data-placement="top" data-original-title="Add new item"></i>
+										<i class="fa fa-commenting" data-toggle="tooltip" data-placement="top" data-original-title="Send Feedback"></i>
 									</button>
 								</header>
 							</div>
@@ -119,7 +121,7 @@
 										<form action="" class="form form-validate floating-label" novalidate="novalidate">
 											<div class="card">
 												<div class="card-head style-default-light">
-													<header>Add item</header>
+													<header>Send Feedback</header>
 													<header class="right">
 														<button type="button" class="btn btn-icon-toggle ink-reaction reset" data-dismiss="modal">
 														<i class="fa fa-times"></i>
@@ -127,34 +129,13 @@
 													</header>
 												</div>
 												<div class="card-body">
-
 													<div class="form-group">
-														<input type="text" class="form-control" id="detail" name="txtDetail" required>
-														<label for="Name1">Item Detail</label>
+														<textarea name="txtaFeedback" placeholder="Your Feedback" class="form-control"></textarea>
 													</div>
-													<div class="form-group">
-														<input type="text" class="form-control autocomplete" id="customer-item" name="txtCustomerItem" required>
-														<label for="customer-item">Customer Name*</label>
-														<ul id="auto-item" class="search-text auto" table-target="#tableItem" input-target="#customer-item">
-														</ul>
-													</div>
-													<div class="form-group">
-														<input type="text" class="form-control" id="status" name="txtStatus" required>
-														<label for="detail">Status*</label>
-													</div>
-													<div class="form-group none-floating-label">
-														<input type="text" class="form-control" id="shipping-date" name="txtShippingDate" data-inputmask="'alias': 'date'" required>
-														<label>Shipping Date*</label>
-													</div>
-													<div class="form-group date none-floating-label">
-														<input type="text" class="form-control" id="delivery-date" name="txtDeliveryDate" data-inputmask="'alias': 'date'" required>
-														<label>Delivery Date*</label>
-													</div>
-
 												</div>
 												<div class="card-actionbar">
 													<div class="card-actionbar-row">
-														<input type="submit" class="btn btn-flat btn-primary ink-reaction" id="btnAddItem" name="btnSubmitItem" value="ADD ITEM">
+														<input type="submit" class="btn btn-flat btn-primary ink-reaction" id="btnAddItem" name="btnSubmitItem" value="SEND">
 														<input type="button" class="btn btn-flat btn-primary ink-reaction reset" data-dismiss="modal" value="CLOSE">
 													</div>
 												</div>
@@ -176,170 +157,100 @@
 												<tr>
 													<th class="sort-numeric sorting_asc">Item ID</th>
 													<th>Item Details</th>
-													<th>Customer Name</th>
-													<th>Status</th>
-													<th>Shipping Date</th>
-													<th>Delivery Date</th>
-													<th class="text-right">Action</th>
+													<th>Cargo Arrival Date</th>
+													<th>Cargo Shipping Date</th>
+													<th>Cargo Status</th>																										
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<td>1</td>
-													<td>Glasses</td>
-													<td>John Joe</td>
-													<td>On plane</td>
+													<td>
+														<div class="detail-item">
+															<div class="thumb-item">
+																<a href="#" class="item">
+																	<img src="./assets/img/cargo1.jpg" alt="Invicta 10620 Men's Corduba Chronograph Silver Textured Dial Black">
+																</a>
+															</div>
+														</div>
+														<div class="info-item">
+															<div class="title-item">
+																<a href="#">
+																	Invicta 10620 Men's Corduba Chronograph Silver Textured Dial Black
+																</a>
+															</div>
+														</div>
+													</td>
 													<td>21/03/2016</td>
 													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
-													</td>
+													<td>Pending</td>
 												</tr>
-												<tr>
-													<td>3</td>
-													<td>Glasses</td>
-													<td>Bill Gates</td>
-													<td>On plane</td>
-													<td>21/02/2016</td>
-													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
-													</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>Glasses</td>
-													<td>Bill Gates</td>
-													<td>On plane</td>
-													<td>21/02/2016</td>
-													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
-													</td>
-												</tr>												
 												<tr>
 													<td>2</td>
-													<td>Glasses</td>
-													<td>Nash Grier</td>
-													<td>On plane</td>
-													<td>21/07/2016</td>
-													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
+													<td>
+														<div class="detail-item">
+															<div class="thumb-item">
+																<a href="#" class="item">
+																	<img src="./assets/img/cargo2.jpg" alt="Lucien Piccard 40024-03 Men's Vertigo Black Genuine Leather Blue Dial">
+																</a>
+															</div>
+														</div>
+														<div class="info-item">
+															<div class="title-item">
+																<a href="#">
+																	Lucien Piccard 40024-03 Men's Vertigo Black Genuine Leather Blue Dial
+																</a>
+															</div>
+														</div>
 													</td>
-												</tr>
-												<tr>
-													<td>1</td>
-													<td>Glasses</td>
-													<td>Shawn Mendes</td>
-													<td>On plane</td>
-													<td>21/07/2016</td>
+													<td>21/03/2016</td>
 													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
-													</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>Glasses</td>
-													<td>Bill Gates</td>
-													<td>On plane</td>
-													<td>21/02/2016</td>
-													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
-													</td>
+													<td>Pending</td>
 												</tr>
 												<tr>
 													<td>3</td>
-													<td>Glasses</td>
-													<td>Bill Gates</td>
-													<td>On plane</td>
-													<td>21/02/2016</td>
-													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
+													<td>
+														<div class="detail-item">
+															<div class="thumb-item">
+																<a href="#" class="item">
+																	<img src="./assets/img/cargo1.jpg" alt="Invicta 10620 Men's Corduba Chronograph Silver Textured Dial Black">
+																</a>
+															</div>
+														</div>
+														<div class="info-item">
+															<div class="title-item">
+																<a href="#">
+																	Invicta 10620 Men's Corduba Chronograph Silver Textured Dial Black
+																</a>
+															</div>
+														</div>
 													</td>
+													<td>21/03/2016</td>
+													<td>21/08/2016</td>
+													<td>Checking</td>
 												</tr>
 												<tr>
-													<td>3</td>
-													<td>Glasses</td>
-													<td>Bill Gates</td>
-													<td>On plane</td>
-													<td>21/02/2016</td>
-													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
+													<td>4</td>
+													<td>
+														<div class="detail-item">
+															<div class="thumb-item">
+																<a href="#" class="item">
+																	<img src="./assets/img/cargo2.jpg" alt="Lucien Piccard 40024-03 Men's Vertigo Black Genuine Leather Blue Dial">
+																</a>
+															</div>
+														</div>
+														<div class="info-item">
+															<div class="title-item">
+																<a href="#">
+																	Lucien Piccard 40024-03 Men's Vertigo Black Genuine Leather Blue Dial
+																</a>
+															</div>
+														</div>
 													</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>Glasses</td>
-													<td>Bill Gates</td>
-													<td>On plane</td>
-													<td>21/02/2016</td>
+													<td>21/03/2016</td>
 													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
-													</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>Glasses</td>
-													<td>Bill Gates</td>
-													<td>On plane</td>
-													<td>21/02/2016</td>
-													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
-													</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>Glasses</td>
-													<td>Bill Gates</td>
-													<td>On plane</td>
-													<td>21/02/2016</td>
-													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
-													</td>
-												</tr>
-												<tr>
-													<td>5</td>
-													<td>Glasses</td>
-													<td>Harry Styles</td>
-													<td>On plane</td>
-													<td>21/07/2016</td>
-													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
-													</td>
-												</tr>
-												<tr>
-													<td>112</td>
-													<td>Glasses</td>
-													<td>Zayn Malik</td>
-													<td>On plane</td>
-													<td>21/07/2016</td>
-													<td>21/08/2016</td>
-													<td class="text-right">
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit item"><i class="fa fa-pencil"></i></button>
-														<button type="button" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Delete item"><i class="fa fa-trash-o"></i></button>
-													</td>
-												</tr>
+													<td>Arrived</td>
+												</tr>												
 											</tbody>
 										</table>
 									</div>

@@ -1,0 +1,73 @@
+/* PAGE */
+.right{
+  float:right;
+}
+.left{
+  float: left;
+}
+
+.card-head header{
+  text-transform: uppercase;
+}
+
+.card-head header i.fa{
+  font-size: 25px;
+}
+
+.header-nav-profile .dropdown {
+  padding: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+    .headerbar-right .header-nav-profile {
+        position: absolute;
+        float: left;
+        width: 100%;
+        padding-right: 20px;
+  }
+}
+
+
+/* DATE FLOATING LABEL */
+.none-floating-label .form-control ~ label {
+  top: 0;
+  font-size: 12px;
+}
+
+
+/*--------IMAGE CARGO----------*/
+.detail-item{
+    float: left;    
+}
+
+.detail-item .thumb-item{
+    width: 70px;
+    float: left;
+    margin: 0 5px 5px 0;
+    border:     
+}
+
+.thumb-item .item{
+    border: #ddd 1px solid;
+    background: #fff;
+    display: table-cell;
+    width: 68px;
+    height: 68px;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.thumb-item .item img{
+    vertical-align: middle;
+    max-width: 68px;
+    max-height: 68px;
+}
+
+.info-item {
+    margin-left: 60px;
+}
+.info-item a{
+    text-decoration: none;
+}
